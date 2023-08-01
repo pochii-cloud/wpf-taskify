@@ -19,10 +19,10 @@
  
             <TextBlock Grid.Row="0" Foreground="White" Text="Add Task"  FontWeight="Bold" FontSize="25"/>
             <TextBlock Grid.Row="1" Foreground="White" Text="Task Title:" Margin="0 10"/>
-            <TextBox Grid.Row="2" Background="Transparent" BorderBrush="#7C5DFA" BorderThickness=" 0 0 0 2" Foreground="white"/>
+            <TextBox x:Name="title" Grid.Row="2" Background="Transparent" BorderBrush="#7C5DFA" BorderThickness=" 0 0 0 2" Foreground="white"/>
             <TextBlock Grid.Row="3" Foreground="White" Text="Task Description:" Margin="0 10"/>
-            <TextBox Grid.Row="4" Background="Transparent" BorderBrush="#7C5DFA" BorderThickness=" 0 0 0 2" Foreground="white"/>
-            <Button Grid.Row="5" Content="Add Task" Foreground="White" Background="#7C5DFA" Margin="0 10">
+            <TextBox x:Name="description" Grid.Row="4" Background="Transparent" BorderBrush="#7C5DFA" BorderThickness=" 0 0 0 2" Foreground="white"/>
+            <Button Grid.Row="5" Content="Add Task" Foreground="White" Background="#7C5DFA" Margin="0 10" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

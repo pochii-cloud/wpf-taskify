@@ -23,5 +23,13 @@ namespace TASKIFY
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(title.Text == "" || description.Text == "")
+            {
+                MessageBox.Show("Please fill in all Fields");
+            } 
+        }
     }
 }
