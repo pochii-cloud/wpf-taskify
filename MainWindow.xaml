@@ -32,7 +32,7 @@
             <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0" MouseDoubleClick="TaskListBox_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Background="#1E2139">
+                        <Grid Background="#1E2139" Margin="0 5" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -57,7 +57,7 @@
                             </Label>
 
 
-                            <Button Grid.Column="3" Content="delete" Foreground="white" Background="red" Click="Delete_Button_Click" Tag="{Binding id}"/>
+                            <Button Grid.Column="3" Content="delete" Foreground="white" Background="red" Click="Delete_Button_Click" Tag="{Binding id}" Margin="5 0"/>
                             
                            
                         </Grid>

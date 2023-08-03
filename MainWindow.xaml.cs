@@ -44,7 +44,7 @@ namespace TASKIFY
             if (taskListBox.SelectedItem != null)
             {
                 var selectedTask = (TodoItem)taskListBox.SelectedItem;
-                selectedTask.is_complete = true; // Mark the task as complete
+                selectedTask.is_complete = !selectedTask.is_complete; // Mark the task as complete
 
                 todoDataAccess.UpdateTask(selectedTask); // Update the task in the database
 
