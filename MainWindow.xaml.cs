@@ -36,5 +36,41 @@ namespace TASKIFY
             Console.WriteLine("add task open");
             this.Close();
         }
+
+
+
+        private void TaskListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (taskListBox.SelectedItem != null)
+            {
+                var selectedTask = (TodoItem)taskListBox.SelectedItem;
+                selectedTask.is_complete = true; // Mark the task as complete
+
+                todoDataAccess.UpdateTask(selectedTask); // Update the task in the database
+
+                // After updating the task, refresh the ListBox to show the updated tasks.
+                List<TodoItem> tasks = todoDataAccess.GetAllTasks();
+                taskListBox.ItemsSource = tasks;
+            }
+        }
+
+
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button deleteButton && deleteButton.Tag is int taskId)
+            {
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this task?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    todoDataAccess.DeleteTask(taskId);
+
+                    // After deleting the task, you might want to refresh the ListBox to show the updated tasks.
+                    List<TodoItem> tasks = todoDataAccess.GetAllTasks();
+                    taskListBox.ItemsSource = tasks;
+                }
+            }
+        }
+
     }
 }

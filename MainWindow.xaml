@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TASKIFY"
         mc:Ignorable="d"
+
         
          Height="450" Width="600" Background="#141625">
     <Border Padding="80 20">
@@ -28,7 +29,7 @@
                 </Button>
             </Grid>
 
-            <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0">
+            <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0" MouseDoubleClick="TaskListBox_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Background="#1E2139">
@@ -36,14 +37,29 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="{Binding title}" Foreground="White" Padding="5 5"/>
                             <TextBlock Grid.Column="1" Text="{Binding description}" Foreground="White" Padding="5 5"/>
-                            <!--<TextBlock Grid.Column="2"
-                                       Text="{Binding is_complete, 
-                                Converter={StaticResource BoolToStatusConverter}}"
-                                       Foreground="{Binding is_complete, Converter={StaticResource BoolToStatusColorConverter}}"
-                                       Background="#203443" Padding="5 5"/>-->
+                            <Label Grid.Column="2">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Setter Property="Content" Value="Not Complete"/>
+                                        <Setter Property="Foreground" Value="Red"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding is_complete}" Value="True">
+                                                <Setter Property="Content" Value="Completed"/>
+                                                <Setter Property="Foreground" Value="Green"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+
+
+                            <Button Grid.Column="3" Content="delete" Foreground="white" Background="red" Click="Delete_Button_Click" Tag="{Binding id}"/>
+                            
+                           
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

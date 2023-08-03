@@ -19,17 +19,37 @@ namespace TASKIFY
     /// </summary>
     public partial class AddTask : Window
     {
+        private TodoDataAccess todoDataAccess;
         public AddTask()
         {
             InitializeComponent();
+            todoDataAccess = new TodoDataAccess();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+
         {
-            if(title.Text == "" || description.Text == "")
+            if (title.Text == "" || description.Text == "")
             {
                 MessageBox.Show("Please fill in all Fields");
-            } 
+            }
+            else
+            {
+                var newTask = new TodoItem
+                {
+                    title = title.Text,
+                    description = description.Text,
+                    is_complete = false // Assuming the default value for new tasks is 'false' for is_complete.
+                };
+
+                todoDataAccess.InsertTask(newTask);
+                this.Hide();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+
+                
+
+            }
         }
     }
 }
