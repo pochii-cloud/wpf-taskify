@@ -21,3 +21,7 @@ D:\C#\TASKIFY\obj\Debug\net7.0-windows\TASKIFY.genruntimeconfig.cache
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\ref\TASKIFY.dll
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\AddTask.g.cs
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\AddTask.baml
+D:\C#\TASKIFY\bin\Debug\net7.0-windows\TASKIFY.dll.config
+D:\C#\TASKIFY\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C#\TASKIFY\bin\Debug\net7.0-windows\Npgsql.dll
+D:\C#\TASKIFY\obj\Debug\net7.0-windows\TASKIFY.csproj.CopyComplete

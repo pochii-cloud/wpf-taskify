@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TASKIFY"
         mc:Ignorable="d"
         
-         Height="450" Width="500" Background="#141625">
+         Height="450" Width="600" Background="#141625">
     <Border Padding="80 20">
         <StackPanel>
             <Grid>
@@ -28,27 +28,28 @@
                 </Button>
             </Grid>
 
-            <Grid Background="#1E2139" Margin="0 10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Task one" Foreground="White" Padding="5 5"/>
-                <TextBlock Grid.Column="1" Text="1st Aug 2023" Foreground="White" Padding="5 5"/>
-                <TextBlock Grid.Column="3" Text="completed" Foreground="#33D69F" Background="#203443" Padding="5 5"/>
-            </Grid>
+            <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="#1E2139">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding title}" Foreground="White" Padding="5 5"/>
+                            <TextBlock Grid.Column="1" Text="{Binding description}" Foreground="White" Padding="5 5"/>
+                            <!--<TextBlock Grid.Column="2"
+                                       Text="{Binding is_complete, 
+                                Converter={StaticResource BoolToStatusConverter}}"
+                                       Foreground="{Binding is_complete, Converter={StaticResource BoolToStatusColorConverter}}"
+                                       Background="#203443" Padding="5 5"/>-->
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
-            <Grid Background="#1E2139">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Task two" Foreground="White" Padding="5 5"/>
-                <TextBlock Grid.Column="1" Text="31st Jul 2023" Foreground="White" Padding="5 5"/>
-                <TextBlock Grid.Column="3" Text="pending" Foreground="#FF8F00" Background="#352D33" Padding="5 5"/>
-            </Grid>
+
         </StackPanel>
     </Border>
 </Window>

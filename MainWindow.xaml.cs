@@ -20,15 +20,20 @@ namespace TASKIFY
     /// </summary>
     public partial class MainWindow : Window
     {
+        private TodoDataAccess todoDataAccess;
         public MainWindow()
         {
             InitializeComponent();
+            todoDataAccess = new TodoDataAccess();
+            List<TodoItem> tasks = todoDataAccess.GetAllTasks();
+            taskListBox.ItemsSource = tasks;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddTask addTask= new AddTask();
             addTask.Show();
+            Console.WriteLine("add task open");
             this.Close();
         }
     }

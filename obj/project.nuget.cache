@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cAMsDpgryUP1lSdfPaP7MHhPLLqqcewQnEbJyzjw73cZiM2PUFxnBYg6+JR106MqPzggu4wBtzhN7gUKyyNaYw==",
+  "dgSpecHash": "pK+aH30bbjf3gMAPQtR/7rOoBV61+knQLDFR4exKESn4rEfP66j2EPyLsXNUs6nzAtsgSaqqdZEkawF9/THuuA==",
   "success": true,
   "projectFilePath": "D:\\C#\\TASKIFY\\TASKIFY.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\John Mwaniki\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\John Mwaniki\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
