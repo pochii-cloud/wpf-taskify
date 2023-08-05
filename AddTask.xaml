@@ -7,9 +7,19 @@
         mc:Ignorable="d"
         Title="AddTask" Height="450" Width="800" Background="#141625">
     <StackPanel>
+
+        <Grid HorizontalAlignment="Center" Margin="0 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Content="Back" Foreground="White" Background="#7C5DFA" Padding="10" Click="Button_Click_back"/>
+            <TextBlock Grid.Column="1" Foreground="White" Text="Add Task"  FontWeight="Bold" FontSize="25"/>
+        </Grid>
         <Grid HorizontalAlignment="Center" Margin="0 20" Width="400">
             <Grid.RowDefinitions>
-                <RowDefinition/>
+               
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -17,7 +27,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
  
-            <TextBlock Grid.Row="0" Foreground="White" Text="Add Task"  FontWeight="Bold" FontSize="25"/>
+           
             <TextBlock Grid.Row="1" Foreground="White" Text="Task Title:" Margin="0 10"/>
             <TextBox x:Name="title" Grid.Row="2" Background="Transparent" BorderBrush="#7C5DFA" BorderThickness=" 0 0 0 2" Foreground="white"/>
             <TextBlock Grid.Row="3" Foreground="White" Text="Task Description:" Margin="0 10"/>

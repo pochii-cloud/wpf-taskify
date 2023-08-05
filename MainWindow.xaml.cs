@@ -72,5 +72,26 @@ namespace TASKIFY
             }
         }
 
+        private void Open_Update_Window(object sender, RoutedEventArgs e)
+        {
+            if (taskListBox.SelectedItem != null)
+            {
+               
+
+                var selectedTask = (TodoItem)taskListBox.SelectedItem;
+
+                Update_task updateTaskWindow = new Update_task(selectedTask);
+                updateTaskWindow.ShowDialog();
+
+                // After updating the task, refresh the ListBox to show the updated tasks.
+                List<TodoItem> tasks = todoDataAccess.GetAllTasks();
+                taskListBox.ItemsSource = tasks;
+            }
+            else
+            {
+                MessageBox.Show("Please select a task to update.");
+            }
+            
+        }
     }
 }

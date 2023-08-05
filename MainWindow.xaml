@@ -38,6 +38,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="{Binding title}" Foreground="White" Padding="5 5"/>
                             <TextBlock Grid.Column="1" Text="{Binding description}" Foreground="White" Padding="5 5"/>
@@ -58,6 +59,7 @@
 
 
                             <Button Grid.Column="3" Content="delete" Foreground="white" Background="red" Click="Delete_Button_Click" Tag="{Binding id}" Margin="5 0"/>
+                            <Button Grid.Column="4" Content="update" Foreground="white" Background="blue" Click="Open_Update_Window" Tag="{Binding id}" Margin="5 0"/>
                             
                            
                         </Grid>

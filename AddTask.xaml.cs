@@ -51,5 +51,12 @@ namespace TASKIFY
 
             }
         }
+
+        private void Button_Click_back(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow= new MainWindow();
+            this.Hide();
+            mainWindow.Show();
+        }
     }
 }
