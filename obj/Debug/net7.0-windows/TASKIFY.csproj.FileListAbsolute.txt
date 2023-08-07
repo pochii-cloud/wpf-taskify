@@ -27,3 +27,5 @@ D:\C#\TASKIFY\bin\Debug\net7.0-windows\Npgsql.dll
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\TASKIFY.csproj.CopyComplete
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\Update_task.g.cs
 D:\C#\TASKIFY\obj\Debug\net7.0-windows\Update_task.baml
+D:\C#\TASKIFY\bin\Debug\net7.0-windows\FontAwesome.WPF.dll
+D:\C#\TASKIFY\obj\Debug\net7.0-windows\App.baml

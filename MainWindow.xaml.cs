@@ -82,10 +82,11 @@ namespace TASKIFY
 
                 Update_task updateTaskWindow = new Update_task(selectedTask);
                 updateTaskWindow.ShowDialog();
+                this.Hide();
 
                 // After updating the task, refresh the ListBox to show the updated tasks.
-                List<TodoItem> tasks = todoDataAccess.GetAllTasks();
-                taskListBox.ItemsSource = tasks;
+                //List<TodoItem> tasks = todoDataAccess.GetAllTasks();
+                //taskListBox.ItemsSource = tasks;
             }
             else
             {

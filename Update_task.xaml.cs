@@ -42,7 +42,10 @@ namespace TASKIFY
             };
             
             todoDataAccess.UpdateTask(todoitem);
-            MessageBox.Show(todoitem.title);
+            this.Hide();
+            MessageBox.Show("Task Updated Successfully");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
 
         }
 

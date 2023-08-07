@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TASKIFY"
         mc:Ignorable="d"
+        
 
         
          Height="450" Width="600" Background="#141625">
@@ -29,7 +30,7 @@
                 </Button>
             </Grid>
 
-            <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0" MouseDoubleClick="TaskListBox_MouseDoubleClick">
+            <ListBox x:Name="taskListBox" Background="#1E2139" BorderThickness="0" MouseDoubleClick="TaskListBox_MouseDoubleClick" Margin="0 20">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Background="#1E2139" Margin="0 5" >

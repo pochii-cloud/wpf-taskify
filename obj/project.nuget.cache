@@ -1,11 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "pK+aH30bbjf3gMAPQtR/7rOoBV61+knQLDFR4exKESn4rEfP66j2EPyLsXNUs6nzAtsgSaqqdZEkawF9/THuuA==",
+  "dgSpecHash": "9z33YE+z157RTQK+Zjrp6s+hWKNSGU7H9Thh1Ali74hXUOAeC9gw0AiixKUlIqwTAX+lsaUNCvW+vMdKcztZ9A==",
   "success": true,
   "projectFilePath": "D:\\C#\\TASKIFY\\TASKIFY.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\John Mwaniki\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\John Mwaniki\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\John Mwaniki\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FontAwesome.WPF 4.7.0.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
 }
